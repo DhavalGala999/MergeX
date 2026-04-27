@@ -2,8 +2,8 @@ import './globals.css'
 import { Toaster } from '@/components/ui/sonner'
 
 export const metadata = {
-  title: 'TechVistaar — Premium Next.js, React & ERPNext Studio',
-  description: 'TechVistaar is a boutique engineering studio building beautiful Next.js apps, React products, and ERPNext solutions for ambitious teams.',
+  title: 'MergeX — Premium Next.js, React & ERPNext Studio',
+  description: 'MergeX is a boutique engineering studio building beautiful Next.js apps, React products, and ERPNext solutions for ambitious teams.',
 }
 
 export default function RootLayout({ children }) {

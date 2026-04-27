@@ -9,7 +9,7 @@ async function getDb() {
   if (db) return db
   client = new MongoClient(process.env.MONGO_URL)
   await client.connect()
-  const dbName = process.env.DB_NAME || 'techvistaar'
+  const dbName = process.env.DB_NAME || 'mergex'
   db = client.db(dbName)
   return db
 }
@@ -28,7 +28,7 @@ export async function GET(request, { params }) {
   const path = (params?.path || []).join('/')
   try {
     if (path === '' || path === 'health') {
-      return NextResponse.json({ ok: true, service: 'TechVistaar API', time: new Date().toISOString() }, { headers: cors })
+      return NextResponse.json({ ok: true, service: 'MergeX API', time: new Date().toISOString() }, { headers: cors })
     }
     if (path === 'leads') {
       const database = await getDb()

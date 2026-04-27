@@ -72,7 +72,7 @@ const TEAM = [
 ]
 
 const TESTIMONIALS = [
-  { quote: 'TechVistaar shipped our ERPNext rollout 2 weeks ahead of schedule and the Next.js portal looks unreal. Truly a premium team.', name: 'Placeholder Client', company: 'Ops Director, Manufacturing Co.' },
+  { quote: 'MergeX shipped our ERPNext rollout 2 weeks ahead of schedule and the Next.js portal looks unreal. Truly a premium team.', name: 'Placeholder Client', company: 'Ops Director, Manufacturing Co.' },
   { quote: 'The best engineering partners we have worked with. Clean code, clear communication, zero drama.', name: 'Placeholder Client', company: 'CTO, SaaS Startup' },
 ]
 
@@ -98,7 +98,7 @@ function Nav() {
           <div className="relative h-8 w-8 rounded-lg bg-gradient-to-br from-indigo-500 via-fuchsia-500 to-sky-400 animate-gradient flex items-center justify-center">
             <Sparkles className="h-4 w-4 text-white" />
           </div>
-          <span className="font-semibold tracking-tight text-white">TechVistaar</span>
+          <span className="font-semibold tracking-tight text-white">MergeX</span>
         </a>
         <nav className="hidden md:flex items-center gap-8">
           {links.map(l => (
@@ -154,7 +154,7 @@ function Hero() {
         </h1>
 
         <p className="animate-fade-up mt-8 max-w-2xl text-lg text-zinc-400 leading-relaxed" style={{ animationDelay: '180ms' }}>
-          TechVistaar is a boutique studio crafting beautiful <span className="text-white">Next.js</span> & <span className="text-white">React</span> apps and ambitious <span className="text-white">ERPNext</span> solutions for teams that care about the details.
+          MergeX is a boutique studio crafting beautiful <span className="text-white">Next.js</span> & <span className="text-white">React</span> apps and ambitious <span className="text-white">ERPNext</span> solutions for teams that care about the details.
         </p>
 
         <div className="animate-fade-up mt-10 flex flex-wrap items-center gap-4" style={{ animationDelay: '260ms' }}>
@@ -485,9 +485,9 @@ function Footer() {
           <div className="relative h-7 w-7 rounded-lg bg-gradient-to-br from-indigo-500 via-fuchsia-500 to-sky-400 animate-gradient flex items-center justify-center">
             <Sparkles className="h-3.5 w-3.5 text-white" />
           </div>
-          <span className="font-semibold text-white">TechVistaar</span>
+          <span className="font-semibold text-white">MergeX</span>
         </div>
-        <div className="text-sm text-zinc-500">© {new Date().getFullYear()} TechVistaar. Crafted with care.</div>
+        <div className="text-sm text-zinc-500">© {new Date().getFullYear()} MergeX. Crafted with care.</div>
         <div className="flex items-center gap-4 text-zinc-500">
           <Github className="h-4 w-4 hover:text-white transition-colors cursor-pointer" />
           <Linkedin className="h-4 w-4 hover:text-white transition-colors cursor-pointer" />
