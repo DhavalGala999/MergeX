@@ -65,16 +65,12 @@ const STACK = [
   'Docker', 'AWS', 'Vercel', 'Stripe', 'Framer Motion',
 ]
 
-const TEAM = [
-  { name: 'Team Member 01', role: 'Full-Stack Lead · Next.js / React', initials: 'T1' },
-  { name: 'Team Member 02', role: 'ERPNext / Frappe Specialist', initials: 'T2' },
-  { name: 'Team Member 03', role: 'UI/UX & Product Design', initials: 'T3' },
-]
-
+/*
 const TESTIMONIALS = [
   { quote: 'MergeX shipped our ERPNext rollout 2 weeks ahead of schedule and the Next.js portal looks unreal. Truly a premium team.', name: 'Placeholder Client', company: 'Ops Director, Manufacturing Co.' },
   { quote: 'The best engineering partners we have worked with. Clean code, clear communication, zero drama.', name: 'Placeholder Client', company: 'CTO, SaaS Startup' },
 ]
+*/
 
 function Nav() {
   const [open, setOpen] = useState(false)
@@ -86,9 +82,9 @@ function Nav() {
   }, [])
   const links = [
     { href: '#services', label: 'Services' },
-    { href: '#work', label: 'Work' },
+    // { href: '#work', label: 'Work' },
     { href: '#process', label: 'Process' },
-    { href: '#team', label: 'Team' },
+    // { href: '#team', label: 'Team' },
     { href: '#contact', label: 'Contact' },
   ]
   return (
@@ -154,7 +150,7 @@ function Hero() {
         </h1>
 
         <p className="animate-fade-up mt-8 max-w-2xl text-lg text-zinc-400 leading-relaxed" style={{ animationDelay: '180ms' }}>
-          MergeX is a boutique studio crafting beautiful <span className="text-white">Next.js</span> & <span className="text-white">React</span> apps and ambitious <span className="text-white">ERPNext</span> solutions for teams that care about the details.
+          MergeX is a boutique studio crafting beautiful <span className="text-white">Next.js</span> & <span className="text-white">React</span> apps and ambitious <span className="text-white">Handcrafted</span>, custom-built solutions tailored with precision.
         </p>
 
         <div className="animate-fade-up mt-10 flex flex-wrap items-center gap-4" style={{ animationDelay: '260ms' }}>
@@ -163,11 +159,11 @@ function Hero() {
               Start a project <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </a>
-          <a href="#work">
+          {/* <a href="#work">
             <Button size="lg" variant="outline" className="rounded-full h-12 px-6 border-white/15 bg-white/[0.02] hover:bg-white/[0.06] text-white">
               See our work
             </Button>
-          </a>
+          </a> */}
         </div>
 
         <div className="animate-fade-up mt-20 grid grid-cols-2 md:grid-cols-4 gap-6" style={{ animationDelay: '360ms' }}>
@@ -232,6 +228,7 @@ function Services() {
   )
 }
 
+/*
 function Work() {
   return (
     <section id="work" className="py-24 md:py-32 border-t border-white/5">
@@ -271,6 +268,7 @@ function Work() {
     </section>
   )
 }
+*/
 
 function Process() {
   return (
@@ -328,35 +326,7 @@ function Stack() {
   )
 }
 
-function Team() {
-  return (
-    <section id="team" className="py-24 md:py-32 border-t border-white/5">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="mb-14">
-          <div className="text-xs uppercase tracking-[0.2em] text-indigo-300 mb-3">The team</div>
-          <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-white max-w-3xl">A small, senior crew. No hand-offs.</h2>
-        </div>
-        <div className="grid md:grid-cols-3 gap-5">
-          {TEAM.map((m, i) => (
-            <div key={i} className="shine-border rounded-2xl p-6 group">
-              <div className="relative h-28 w-28 rounded-2xl bg-gradient-to-br from-indigo-500/30 via-fuchsia-500/20 to-sky-400/30 animate-gradient flex items-center justify-center mb-6 border border-white/10">
-                <span className="text-3xl font-semibold text-white/80">{m.initials}</span>
-              </div>
-              <div className="text-lg text-white">{m.name}</div>
-              <div className="text-sm text-zinc-400 mt-1">{m.role}</div>
-              <div className="mt-5 flex items-center gap-3 text-zinc-500">
-                <Github className="h-4 w-4 hover:text-white transition-colors cursor-pointer" />
-                <Linkedin className="h-4 w-4 hover:text-white transition-colors cursor-pointer" />
-                <Mail className="h-4 w-4 hover:text-white transition-colors cursor-pointer" />
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
-
+/*
 function Testimonials() {
   return (
     <section className="py-24 border-t border-white/5">
@@ -377,6 +347,7 @@ function Testimonials() {
     </section>
   )
 }
+*/
 
 function Contact() {
   const [loading, setLoading] = useState(false)
@@ -488,11 +459,11 @@ function Footer() {
           <span className="font-semibold text-white">MergeX</span>
         </div>
         <div className="text-sm text-zinc-500">© {new Date().getFullYear()} MergeX. Crafted with care.</div>
-        <div className="flex items-center gap-4 text-zinc-500">
+        {/* <div className="flex items-center gap-4 text-zinc-500">
           <Github className="h-4 w-4 hover:text-white transition-colors cursor-pointer" />
           <Linkedin className="h-4 w-4 hover:text-white transition-colors cursor-pointer" />
           <Mail className="h-4 w-4 hover:text-white transition-colors cursor-pointer" />
-        </div>
+        </div> */}
       </div>
     </footer>
   )
@@ -505,11 +476,10 @@ const App = () => {
       <Hero />
       <Marquee />
       <Services />
-      <Work />
+      {/* <Work /> */}
       <Process />
       <Stack />
-       <Team /> 
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Contact />
       <Footer />
     </main>
