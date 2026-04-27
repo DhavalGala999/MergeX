@@ -172,8 +172,8 @@ function Hero() {
 
         <div className="animate-fade-up mt-20 grid grid-cols-2 md:grid-cols-4 gap-6" style={{ animationDelay: '360ms' }}>
           {[
-            { icon: Rocket, label: 'Projects shipped', value: '40+' },
-            { icon: Users, label: 'Happy clients', value: '25+' },
+            { icon: Rocket, label: 'Projects shipped', value: '20+' },
+            { icon: Users, label: 'Happy clients', value: '10+' },
             { icon: Award, label: 'Years combined', value: '12+' },
             { icon: Clock, label: 'Avg. time-to-launch', value: '6 wks' },
           ].map((s, i) => (
