@@ -1,18 +1,47 @@
-import './globals.css'
-import { Toaster } from '@/components/ui/sonner'
+import './site.css'
+import { COMPANY, DESCRIPTION, SITE_URL, TITLE } from '@/components/site/content'
 
 export const metadata = {
-  title: 'MergeX — Premium Next.js, React & ERPNext Studio',
-  description: 'MergeX is a boutique engineering studio building beautiful Next.js apps, React products, and ERPNext solutions for ambitious teams.',
+  metadataBase: new URL(SITE_URL),
+  title: TITLE,
+  description: DESCRIPTION,
+  applicationName: COMPANY,
+  alternates: { canonical: '/' },
+  robots: { index: true, follow: true },
+  openGraph: {
+    type: 'website',
+    url: '/',
+    siteName: COMPANY,
+    locale: 'en_IN',
+    title: TITLE,
+    description: DESCRIPTION,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: TITLE,
+    description: DESCRIPTION,
+  },
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+  themeColor: '#FFFFFF',
 }
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="dark">
-      <body className="bg-[#07070a] text-zinc-100 antialiased selection:bg-indigo-500/30 selection:text-white">
-        {children}
-        <Toaster theme="dark" richColors position="top-center" />
-      </body>
+    <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap"
+        />
+      </head>
+      <body>{children}</body>
     </html>
   )
 }
